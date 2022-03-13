@@ -8,8 +8,10 @@ Last update: March 4, 2021
 # import modules
 import pandas as pd
 import numpy as np
-import yfinance as yf
+# import yfinance as yf
 import matplotlib.pyplot as plt
+from pandas_datareader import data
+from matplotlib.ticker import FuncFormatter
 
 # main variables
 # stock_name    :   ticker symbol from yahoo finance
@@ -24,7 +26,9 @@ pred_end_date = '2020-12-31'
 scen_size = 10000
 
 # download and prepare data
-prices = yf.download(tickers=stock_name, start=start_date, end=pred_end_date)['Adj Close']
+# prices = yf.download(tickers=stock_name, start=start_date, end=pred_end_date)['Adj Close']
+prices = data.DataReader(stock_name,'yahoo', start_date, pred_end_date)
+prices = prices['Adj Close']
 train_set = prices.loc[:end_date]
 test_set = prices.loc[end_date:pred_end_date]
 daily_returns = ((train_set / train_set.shift(1)) - 1)[1:]
