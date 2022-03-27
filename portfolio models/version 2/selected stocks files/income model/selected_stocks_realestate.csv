@@ -1,0 +1,2 @@
+,ticker,name,sector,Earnings_expectation,irv_status,capm_status,esg_status,current_price,annu_return_10y,market_cap,marketcap_cat,beta,eps_ttm,growth_estimate_5y,pe_forward,pe_trailing,irv_FairValue,ESG_risk,capm_expected_return,AHV_5y,annu_return_5y,sharpe
+581,LAMR,Lamar Advertising Company,Real Estate,Increase,Above Fair Price,UnderValued,Sustainable,109.85,0.1678058093415884,11121103872.0,Large,1.44,3.689,0.03,23.422174,29.777718,20.371571449737218,16.28,0.1942452081130137,0.4135499373875815,0.1285213396993358,0.457
